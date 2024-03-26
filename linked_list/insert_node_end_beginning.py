@@ -24,3 +24,6 @@ class LinkedList:
             print (current.data)
             current = current.next
 
+    def print_size(self):
+        current = self.head
+
