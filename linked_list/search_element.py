@@ -4,3 +4,6 @@ def search(self, target_node:Node):
         if current.data == target_node.data:
             print("Found")
             return
+        current = current.next
+    print("Not found")
+    return
