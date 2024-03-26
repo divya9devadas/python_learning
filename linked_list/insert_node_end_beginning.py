@@ -26,4 +26,6 @@ class LinkedList:
 
     def print_size(self):
         current = self.head
-
+        count = 0
+        while current is not None:
+            count = count+1
