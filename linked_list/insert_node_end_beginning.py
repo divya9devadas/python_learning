@@ -29,3 +29,5 @@ class LinkedList:
         count = 0
         while current is not None:
             count = count+1
+            current = current.next
+            return count-1
