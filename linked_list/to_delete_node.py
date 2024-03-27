@@ -25,6 +25,11 @@ class LinkedList:
             self.head = self.head.next
             return
 
+        current = self.head
+        while current:
+            if current.data == key:
+                break
+
 
 if __name__ == "__main__":
     linked_list = LinkedList()
