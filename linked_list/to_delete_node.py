@@ -22,7 +22,8 @@ class LinkedList:
             return
 
         if self.head.data == key:
-            self
+            self.head = self.head.next
+            return
 
 
 if __name__ == "__main__":
