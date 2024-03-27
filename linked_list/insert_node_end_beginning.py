@@ -31,14 +31,13 @@ class LinkedList:
         while current is not None:
             count = count + 1
             current = current.next
-            return count - 1
+        return count - 1
 
 
 if __name__ == "__main__":
-    for number in [25, 50, 100, 150, 200, 250, 300]:
-        node = Node(number)
-        linked_list = LinkedList()
+    linked_list = LinkedList()
+    nodes = [Node(num) for num in [25, 50, 100, 150, 200, 250, 300]]
+    for node in nodes:
         linked_list.add_node(node)
-
     linked_list.print_linked_list()
-    print(linked_list.print_size)
+    print("Size:", linked_list.print_size())
