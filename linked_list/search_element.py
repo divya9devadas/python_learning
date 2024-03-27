@@ -28,6 +28,7 @@ class LinkedList:
 
 if __name__ == "__main__":
     linked_list = LinkedList()
+
     nodes = [Node(num) for num in [25, 50, 100, 150, 200, 250, 300]]
     for node in nodes:
         linked_list.add_node(node)
