@@ -19,6 +19,10 @@ class LinkedList:
     def delete_node(self, key):
         if self.head is None:
             print("The list is empty")
+            return
+
+        if self.head.data == key:
+            self
 
 
 if __name__ == "__main__":
