@@ -11,7 +11,7 @@ def solve_nested_loop(temperatures) -> List:
     n = len(temperatures)
     answer = [0] * n
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if temperatures[j] > temperatures[i]:
                 answer[i] = j - i
                 break
@@ -20,7 +20,7 @@ def solve_nested_loop(temperatures) -> List:
 
 def solve(temperatures) -> List:
     """
-    Using Monostack (optimal solution)
+    Using Mono-stack (optimal solution)
     """
     n = len(temperatures)
     answer = [0] * n
@@ -34,11 +34,11 @@ def solve(temperatures) -> List:
 
 
 if __name__ == "__main__":
-    temperatures = [73,74,75,71,69,72,76,73]
+    temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
 
     # Adding unit testing(assert)
     assert solve(temperatures) == [1, 1, 4, 2, 1, 1, 0, 0]
     assert solve_nested_loop(temperatures) == [1, 1, 4, 2, 1, 1, 0, 0]
-    assert solve([30,40,50,60]) == [1, 1, 1, 0]
-    assert solve([30,60,90]) == [1, 1, 0]
+    assert solve([30, 40, 50, 60]) == [1, 1, 1, 0]
+    assert solve([30, 60, 90]) == [1, 1, 0]
     print("All tests ran successfully")
