@@ -35,4 +35,10 @@ def solve(temperatures) -> List:
 
 if __name__ == "__main__":
     temperatures = [73,74,75,71,69,72,76,73]
-    print(solve(temperatures))
+
+    # Adding unit testing(assert)
+    assert solve(temperatures) == [1, 1, 4, 2, 1, 1, 0, 0]
+    assert solve_nested_loop(temperatures) == [1, 1, 4, 2, 1, 1, 0, 0]
+    assert solve([30,40,50,60]) == [1, 1, 1, 0]
+    assert solve([30,60,90]) == [1, 1, 0]
+    print("All tests ran successfully")
