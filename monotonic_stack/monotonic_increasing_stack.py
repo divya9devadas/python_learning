@@ -4,10 +4,10 @@ Leetcode #739
 from typing import List
 
 
-"""
-Using nested loop (non optimal)
-"""
 def solve_nested_loop(temperatures) -> List:
+    """
+    Using nested loop (non-optimal solution)
+    """
     n = len(temperatures)
     answer = [0] * n
     for i in range(n):
@@ -18,11 +18,10 @@ def solve_nested_loop(temperatures) -> List:
     return answer
 
 
-
-
-
-
 def solve(temperatures) -> List:
+    """
+    Using Monostack (optimal solution)
+    """
     n = len(temperatures)
     answer = [0] * n
     stack = []
