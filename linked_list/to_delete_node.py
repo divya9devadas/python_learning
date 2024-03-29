@@ -29,8 +29,20 @@ class LinkedList:
         while current:
             if current.data == key:
                 break
+            previous = current
+            current = current.next
+
+        if current is None:
+            print("Key is found")
+        else:
+            previous.next = current.next
 
 
 if __name__ == "__main__":
     linked_list = LinkedList()
+
+    node1 = Node(100)
+    linked_list.add_node(node1)
+
+    linked_list.delete_node(node1)
 
