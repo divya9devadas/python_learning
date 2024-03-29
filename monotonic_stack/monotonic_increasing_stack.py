@@ -10,4 +10,8 @@ def solve(temperatures) -> List:
     stack = []
     for i in range(n):
         while stack and temperatures[stack[-1]] < temperatures[i]:
-            pos
+            pos = stack.pop()
+            answer[pos] = i - pos
+        stack.append(i)
+    return answer
+
