@@ -3,6 +3,7 @@ Leetcode #739
 """
 from typing import List
 
+
 def solve_nested_loop(temperatures) -> List:
     """
     Using nested loop (non-optimal solution)
