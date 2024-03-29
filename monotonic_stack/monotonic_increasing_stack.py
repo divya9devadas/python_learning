@@ -4,6 +4,24 @@ Leetcode #739
 from typing import List
 
 
+"""
+Using nested loop (non optimal)
+"""
+def solve_nested_loop(temperatures) -> List:
+    n = len(temperatures)
+    answer = [0] * n
+    for i in range(n):
+        for j in range(i+1, n):
+            if temperatures[j] > temperatures[i]:
+                answer[i] = j - i
+                break
+    return answer
+
+
+
+
+
+
 def solve(temperatures) -> List:
     n = len(temperatures)
     answer = [0] * n
