@@ -6,3 +6,8 @@ def isAnagram(k, l):
         if letter in k_counter:
             k_counter[letter] = 0
         k_counter[letter] = k_counter[letter] + 1
+
+    for letter in l:
+        if letter in l_counter:
+            l_counter[letter] = 0
+        l_counter[letter] = l_counter[letter] + 1
