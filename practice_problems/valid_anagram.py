@@ -12,3 +12,9 @@ def isAnagram(k, l):
             l_counter[letter] = 0
         l_counter[letter] = l_counter[letter] + 1
     return k_counter == l_counter
+
+
+k = "anagram"
+l = "nagram"
+
+print(isAnagram(k, l))
