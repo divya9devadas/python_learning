@@ -6,3 +6,9 @@ def twoSum(nums, target):
         if complement in temp_dict:
             return temp_dict[complement], ind
         temp_dict[nums[ind]] = ind
+
+
+nums = [2, 7, 11, 15]
+target = 9
+
+print(twoSum(nums, target))
