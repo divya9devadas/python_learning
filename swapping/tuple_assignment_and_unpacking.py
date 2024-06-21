@@ -1,5 +1,6 @@
 # Python program to swap first
 # and last element of a list
+# Time Complexity: O(1)
 
 
 def swap_list(list):
