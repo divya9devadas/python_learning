@@ -11,5 +11,6 @@ def unique_elements(list):
             unique_list.append(i)
     return unique_list
 
-num = [1,3,4,2,6,3,5,1,7,2,8,3,9,4,9,6]
-print(f'List with unique elements')
+
+num = [1, 3, 4, 2, 6, 3, 5, 1, 7, 2, 8, 3, 9, 4, 9, 6]
+print(f'List with unique elements: {unique_elements(num)}')
