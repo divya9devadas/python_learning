@@ -8,11 +8,11 @@ def fizz_buzz():
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz")
         elif i % 3 == 0:
-            return "Fizz"
+            print("Fizz")
         elif i % 5 == 0:
-            return "Buzz"
+            print("Buzz")
         else:
-            return i
+            print(i)
 
 
 fizz_buzz()
