@@ -6,3 +6,7 @@ def calculate_median(nums):
     else:
         return nums_sorted[n // 2]
 
+
+print(calculate_median([1, 2, 3, 4, 5]))
+print(calculate_median([1, 2, 3, 4, 5, 6]))
+print(calculate_median([10, 20, 30, 40, 50, 60]))
