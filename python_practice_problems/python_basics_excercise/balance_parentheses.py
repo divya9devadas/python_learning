@@ -11,8 +11,8 @@ def is_balanced(parentheses):
             return False
     return stack == []
 
-# Test cases
-print(is_balanced("()"))              # Expected output: True
-print(is_balanced("{[()]()}"))        # Expected output: True
-print(is_balanced("{[([)]}"))         # Expected output: False
+
+print(is_balanced("()"))
+print(is_balanced("{[()]()}"))
+print(is_balanced("{[([)]}"))
 print(is_balanced("({}[])"))
