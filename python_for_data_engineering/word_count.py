@@ -43,6 +43,10 @@ class TestSolution(unittest.TestCase):
         expected_output = {'data': 3}
         self.assertEqual(solution(input_string), expected_output)
 
+    def test_punctuations(self):
+        input_string = "and, ball! world."
+        expected_output = {'and,': 1, 'ball!': 1, 'world.':1}
+        self.assertEqual(solution(input_string), expected_output)
 
 if __name__ == "__main__":
     input_string = """data engineering is a good skill to have
