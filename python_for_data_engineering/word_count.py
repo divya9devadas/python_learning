@@ -48,6 +48,12 @@ class TestSolution(unittest.TestCase):
         expected_output = {'and,': 1, 'ball!': 1, 'world.':1}
         self.assertEqual(solution(input_string), expected_output)
 
+    def test_multiple_spaces(self):
+        input_string = "   data    data   "
+        expected_output = {'data': 2}
+        self.assertEqual(solution(input_string), expected_output)
+
+
 if __name__ == "__main__":
     input_string = """data engineering is a good skill to have
 # Data is the new oil
