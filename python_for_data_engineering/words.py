@@ -25,6 +25,11 @@ class TestAvgWordLen(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):  # Expecting an error when dividing by zero
             avg_word_len(words_set)
 
+    def test_same_length_words(self):
+        words_set = {"cat", "dog", "bat"}
+        expected_result = 3.0
+        self.assertEqual(avg_word_len(words_set), expected_result)
+
 
 if __name__ == '__main__':
     words_set = {"elephant", "tiger", "zebra", "giraffe", "monkey"}
