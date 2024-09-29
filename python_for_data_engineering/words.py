@@ -13,6 +13,11 @@ class TestAvgWordLen(unittest.TestCase):
         expected_result = (8 + 5 + 5 + 7 + 6) / 5  # manually calculated
         self.assertAlmostEqual(avg_word_len(words_set), expected_result)
 
+    def test_single_word(self):
+        words_set = {"elephant"}
+        expected_result = 8
+        self.assertEqual(avg_word_len(words_set), expected_result)
+
 
 if __name__ == '__main__':
     words_set = {"elephant", "tiger", "zebra", "giraffe", "monkey"}
