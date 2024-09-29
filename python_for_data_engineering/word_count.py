@@ -12,3 +12,9 @@ def solution(string: str) -> Dict[str, int]:
     return word_count
 
 
+if __name__ == "__main__":
+    input_string = """data engineering is a good skill to have
+# Data is the new oil
+# Data engineering can be massive"""
+    count = solution(string=input_string)
+    print(count)
