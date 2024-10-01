@@ -17,6 +17,11 @@ def word_count_dic(string: str) -> Dict[str, int]:
         count_dic[word] += 1
     return count_dic
 
+# 3. Given a sentence, calculate the average word length.
+def avg_word_length(string: str) -> float:
+    sanitize_string = string.split()
+    total_length = sum(len(word) for word in sanitize_string)
+    return total_length/len(sanitize_string)
 
 class TestSolution(unittest.TestCase):
     def test_basic_case(self):
@@ -66,8 +71,10 @@ if __name__ == "__main__":
 
     solution1 = word_count(string=input_string)
     solution2 = word_count_dic(string=input_string)
+    solution3 = avg_word_length(string=input_string)
 
-    print(f"Total length of the string: {solution1}")
-    print(f"Distinct word count: {solution2}")
+    print(f"Count of distinct words in the sentence: {solution1}")
+    print(f"Counts of each word in the sentence, using a Dictionary: {solution2}")
+    print(f"Average word length in the sentence: {solution3}")
 
     unittest.main()
