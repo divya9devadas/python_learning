@@ -5,6 +5,11 @@ from typing import Dict
 import unittest
 
 
+# 1. Given a sentence, count the distinct words in the sentence
+def word_count(string: str) -> int:
+    return len(set(string.split()))
+
+
 def solution(string: str) -> Dict[str, int]:
     word_count = defaultdict(int)
     sanitize_string = string.lower().split()
@@ -45,7 +50,7 @@ class TestSolution(unittest.TestCase):
 
     def test_punctuations(self):
         input_string = "and, ball! world."
-        expected_output = {'and,': 1, 'ball!': 1, 'world.':1}
+        expected_output = {'and,': 1, 'ball!': 1, 'world.': 1}
         self.assertEqual(solution(input_string), expected_output)
 
     def test_multiple_spaces(self):
@@ -59,6 +64,7 @@ if __name__ == "__main__":
 # Data is the new oil
 # Data engineering can be massive"""
 
+    solution1 = word_count(string=input_string)
     count = solution(string=input_string)
     print(count)
 
