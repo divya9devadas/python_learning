@@ -66,6 +66,8 @@ if __name__ == "__main__":
 
     solution1 = word_count(string=input_string)
     count = solution(string=input_string)
-    print(count)
+
+    print(f"Distinct word count: {count}")
+    print(f"Total length of the string: {solution1}")
 
     unittest.main()
