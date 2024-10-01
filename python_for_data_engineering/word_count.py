@@ -9,13 +9,13 @@ import unittest
 def word_count(string: str) -> int:
     return len(set(string.split()))
 
-
-def solution(string: str) -> Dict[str, int]:
-    word_count = defaultdict(int)
+# 2. Given a sentence, count the distinct words in the sentence, use a Dictionary.
+def word_count_dic(string: str) -> Dict[str, int]:
     sanitize_string = string.lower().split()
+    count_dic = defaultdict(int)
     for word in sanitize_string:
-        word_count[word] += 1
-    return word_count
+        count_dic[word] += 1
+    return count_dic
 
 
 class TestSolution(unittest.TestCase):
@@ -65,9 +65,9 @@ if __name__ == "__main__":
 # Data engineering can be massive"""
 
     solution1 = word_count(string=input_string)
-    count = solution(string=input_string)
+    solution2 = word_count_dic(string=input_string)
 
-    print(f"Distinct word count: {count}")
     print(f"Total length of the string: {solution1}")
+    print(f"Distinct word count: {solution2}")
 
     unittest.main()
